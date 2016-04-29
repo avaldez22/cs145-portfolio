@@ -19,7 +19,7 @@ class MyPortfolio {
         System.out.print("Enter your name: ");
         String name = scan.next();
         return name;
-        
+
 	}
 
 
@@ -27,7 +27,14 @@ class MyPortfolio {
      * Accepts a list of integers as an argument and prints the integers to 
      * the screen on one line.
      */	
-	static void printIntegerList(int[] values) {
+	static void printIntegerList(int[] values) {   
+        
+        for ( int i = 0; i < values.length; i++) {      
+                System.out.print(values[i]);
+        }
+
+        
+
 
 	}
 
