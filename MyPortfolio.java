@@ -15,7 +15,11 @@ class MyPortfolio {
      * to retrieve the name. It shoud return the collected string.
      */
 	static String getFirstName() {
-		return " ";
+        Scanner scan = new Scanner (System.in);
+        System.out.print("Enter your name: ");
+        String name = scan.next();
+        return name;
+        
 	}
 
 
