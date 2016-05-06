@@ -52,7 +52,8 @@ class MyPortfolio {
      * Accepts two characters, swaps the value of left_char and right_char
      * and returns the "new" left_char.
       */	
-	static char swapLeftWithRight(char left_char, char right_char) 
+
+	static char swapLeftWithRight(char left_char, char right_char) {
 	
           char temp;
           temp=left_char;
@@ -63,6 +64,8 @@ class MyPortfolio {
           
     } 
 
+	
+
 
     /**
      * Accepts a list of integers as an argument and swaps the first value 
@@ -70,10 +73,11 @@ class MyPortfolio {
      * containing the swapped version of the array passed in as the argument.
      */	
 	static int[] swapFirstWithLast(int[] values) {
+
           int temp = 0;
           temp = values[0];
           values[0] = values[values.length-1];
-          values[values.length-1]=temp;
+
         
         return values;
 		  
@@ -85,6 +89,7 @@ class MyPortfolio {
      * found in the list.
      */	
 	static int min(int[] values) {
+
             return 0;
             int minValue =values[0];
          for(int i = 0; i<values.length; i++){
@@ -94,6 +99,7 @@ class MyPortfolio {
             }
         }
        return minValue;
+
            
 		
 	}
@@ -103,6 +109,7 @@ class MyPortfolio {
      * found in the list.
      */	
 	static int max(int[] values) {
+
 
             return 0;
            
@@ -114,6 +121,7 @@ class MyPortfolio {
             }
         }
              return maxValue;
+
        
 	}
 
@@ -128,9 +136,7 @@ class MyPortfolio {
          for(int i = 0; i < values.length; i++)   
          sum = sum + values[i];  
         
-         return 0; 
-       
-        int average = (sum / values.length);  
+        
          return average;  
       }  
 
@@ -157,6 +163,7 @@ class MyPortfolio {
      * Accepts a String argument and returns the argument in reverse order.
      */	
 	static String reverseString(String chars) {
+
 		  String reversed = "";  
             for(int i = chars.length(); i>0; i--){  
             reversed = reversed + chars.charAt(i-1);  
@@ -165,5 +172,4 @@ class MyPortfolio {
             return "\nNot implemented yet!";  
             return reversed;       
      
-
 }
