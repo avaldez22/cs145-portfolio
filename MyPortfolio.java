@@ -33,9 +33,6 @@ class MyPortfolio {
                 System.out.print(values[i]);
         }
 
-        
-
-
 	}
 
 
@@ -44,16 +41,28 @@ class MyPortfolio {
      * ORDER to the screen on one line.
      */	
 	static void printIntegerListReversed(int[] values) {
+             
+            for(int i = values.length-1; i > 0; i--){
+            System.out.print(values[i] + " ");
 
-	}
+	        }
+    }
 
     /**
      * Accepts two characters, swaps the value of left_char and right_char
      * and returns the "new" left_char.
       */	
-	static char swapLeftWithRight(char left_char, char right_char) {
-		return ' ';
-	}
+	static char swapLeftWithRight(char left_char, char right_char) 
+	
+          char temp;
+          temp=left_char;
+          left_char=right_char;
+          right_char=temp;
+  
+        return left_char;
+          
+    } 
+
 
     /**
      * Accepts a list of integers as an argument and swaps the first value 
@@ -61,8 +70,14 @@ class MyPortfolio {
      * containing the swapped version of the array passed in as the argument.
      */	
 	static int[] swapFirstWithLast(int[] values) {
-
-		return values;
+          int temp = 0;
+          temp = values[0];
+          values[0] = values[values.length-1];
+          values[values.length-1]=temp;
+        
+        return values;
+		  
+		
 	}
 
     /**
@@ -70,8 +85,17 @@ class MyPortfolio {
      * found in the list.
      */	
 	static int min(int[] values) {
-
-		return 0;
+            return 0;
+            int minValue =values[0];
+         for(int i = 0; i<values.length; i++){
+             
+            if(values[i]< minValue){
+                minValue = values[i];
+            }
+        }
+       return minValue;
+           
+		
 	}
 
     /**
@@ -80,32 +104,66 @@ class MyPortfolio {
      */	
 	static int max(int[] values) {
 
-		return 0;
+            return 0;
+           
+            int maxValue = values[0];
+        for(int i=0; i<values.length; i++){
+            
+            if(values[i]>maxValue){
+                maxValue = values[i];
+            }
+        }
+             return maxValue;
+       
 	}
 
     /**
      * Accepts a list of integers as an argument and returns the average of all the
      * values found in the list.
      */	
-	static int findAverage(int[] values) {
+	       static int findAverage(int[] values) {
+            int sum = 0;          
+             
+        
+         for(int i = 0; i < values.length; i++)   
+         sum = sum + values[i];  
+        
+         return 0; 
+       
+        int average = (sum / values.length);  
+         return average;  
+      }  
 
-		return 0;
-	}
 
     /**
      * Accepts a list of integers and an integer value as arguments and returns 
      * the number of times the integer is found in the list.
      */	
 	static int frequencyCount(int[] values, int val) {
+             return 0;
+             int count = 0;
+             for(int i = 0; i < values.length; i++) {
+             if (val == values[i]) {
+                count++;
+             }
+             
+                return count;;
 
-		return 0;
+
+		
 	}
 
     /**
      * Accepts a String argument and returns the argument in reverse order.
      */	
 	static String reverseString(String chars) {
+		  String reversed = "";  
+            for(int i = chars.length(); i>0; i--){  
+            reversed = reversed + chars.charAt(i-1);  
+            }
+            
+            return "\nNot implemented yet!";  
+            return reversed;       
+     
 
-		return "\nNot implemented yet!";
-	}
 }
